@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>array insertion</title>
+        <script>
+            // let data=[60,30,10,67,40];
+            // for(let i=data.length-1;i>=0;i--){
+            //     if(i>=position){
+            //         data[i+1]=data[i]; 
+            //         if(i==position){
+            //             data[i]=newel;
+            //         }
+            //     }           
+            // }
+            // console.log(data);
+            function insertEl(){
+                let data=[60,30,10,67,40];
+                let newEl=document.getElementById('newelement').value;
+                newEl= parseInt(newEl);
+                let position=document.getElementById('position').value;
+                for(let i=data.length-1;i>=0;i--){
+                if(i>=position){
+                    data[i+1]=data[i]; 
+                    if(i==position){
+                       data[i]=newEl;
+                    }
+                 }           
+             }
+             console.log(data);
+            }
+        </script>
+    </head>
+    <body>
+        
+        <input type="text" id="position" placeholder="enter Postion"/>
+        <input type="text" id="newelement" placeholder="enter new element"/>
+
+        <button onclick="insertEl()">Insert</button>
+    </body>
+</html>

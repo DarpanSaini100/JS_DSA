@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>array traversing</title>
+        <script>
+            let data=[9,3,45,67,66,45];
+        //     for(let i=0;i<data.length;i++)
+        // {
+        //     document.write(`Array ${i} is ${data[i]}<br>`);
+        // }
+        function getElement(){
+            let el=document.getElementById('element').value;
+            if(el<data.length && typeof parseInt(el)==="number"){
+            alert(data[el]);
+            }
+            else{
+                alert(`error`);
+            }
+            
+        }
+        </script>
+    </head>
+    <body>
+
+        <input type="text" id="element" />
+        <button onclick="getElement()">Get Element</button>
+    </body>
+</html>
