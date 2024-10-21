@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+      let data1=[1,2,3,4,5];
+      let data2=[23,12,9,5,33,90];
+      let data3=[];
+      let d1=0;
+      let d2=0;
+      let d3=0;
+      while(d1<data1.length || d2<data2.length){
+        if(data1[d1]<data2[d2]){
+            data3[d3]=data1[d1];
+            d1++;
+        }
+        else{
+            data3[d3]=data2[d2];
+            d2++;
+        }
+        d3++;
+      }
+      console.log(data3);
+      
+    </script>
+  </head>
+  <body>
+    <input type="text" id="item" placeholder="enter Postion" />
+    <button onclick="indexIR()">Index of</button>
+  </body>
+</html>
