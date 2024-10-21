@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+      function reverseArray(arr) {
+        const n = arr.length;
+        const reversedArr = new Array(n); // Create a new array to hold the reversed elements
+
+        for (let i = 0; i < n; i++) {
+          reversedArr[i] = arr[n - 1 - i]; // Assign elements in reverse order
+        }
+
+        return reversedArr;
+      }
+
+      // Example usage:
+      const myArray = [1, 2, 3, 4, 5];
+      const reversedArray = reverseArray(myArray);
+      console.log(reversedArray); // Output: [5, 4, 3, 2, 1]
+    </script>
+  </head>
+  <body></body>
+</html>
