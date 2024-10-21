@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+       let data=[]
+       let intialSize=data.length;
+       let max=7;
+      function push(){
+        let newvalue =document.getElementById("inputel").value;
+        if(intialSize >= max){
+            console.log("stack overflow");
+        }
+        else{
+            data[intialSize]=newvalue;
+            intialSize++;
+            console.log(data);
+            newvalue =document.getElementById("inputel").value="";
+        }
+      }
+
+   
+
+      function pop(){
+        if(intialSize >0){
+            intialSize--;
+            data.length=intialSize;
+            console.log(data);
+            
+        }else{
+            console.log("stack underflow");
+            
+        }
+      }
+     function dispaly(){
+        for(let i=0;i<=intialSize-1;i++){
+            console.log(data[i]);
+            
+        }
+     }
+
+
+    </script>
+  </head>
+  <body>
+    <h2>Stack in js</h2>
+    <input type="text" id="inputel" placeholder="enter any number">
+    <button onclick="push()">add Element</button>
+    <button onclick="pop()">remove element</button>
+    <button onclick="dispaly()">show all element</button>
+  </body>
+</html>
