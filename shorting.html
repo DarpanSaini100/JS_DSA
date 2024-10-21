@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+      let data = [30, 76, 34, 98, 66, 25, 7, 4, 1];
+
+      for (let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data.length; j++) {
+          if (data[j] > data[j + 1]) {
+            let temp = data[j];
+            data[j] = data[j + 1];
+            data[j + 1] = temp;
+          }
+        }
+      }
+      console.log(data);
+    </script>
+  </head>
+  <body></body>
+</html>
