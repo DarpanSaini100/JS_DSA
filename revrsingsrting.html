@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+      let data=[];
+      let currentsize=data.length;
+      function push(newValue){
+        data[currentsize]=newValue;
+        currentsize++;
+        
+      }
+      function pop(){
+        let lasItem=data[currentsize-1];
+        currentsize--;
+        data.length=currentsize;
+        return lasItem;
+      }
+
+      function reversStr(item){
+        for(let i=0;i<item.length;i++){
+            push(item[i]);
+        }
+        for(let i=0;i<item.length;i++){
+            item[i]=pop();
+        }
+        
+      }
+
+     let str= "darpan";
+     str=str.split("");
+     reversStr(str);
+     console.log(str.join(""));
+     
+    
+      
+    </script>
+  </head>
+  <body>hi its me</body>
+</html>
