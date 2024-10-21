@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+       let data=[]
+      function push(newvaule){
+      let intialSize=data.length;
+      let max=7;
+        if(intialSize >= max){
+            console.log("stack overflow");
+        }
+        else{
+            data[intialSize]=newvaule;
+            intialSize++;
+            console.log(data);
+            
+        }
+      }
+
+      push(6);
+      push(7);
+      push(8);
+      push(9);
+    </script>
+  </head>
+  <body></body>
+</html>
