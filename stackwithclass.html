@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Linear Search Array</title>
+    <script>
+        class Stack {
+            constructor(size) {
+                this.item = []; // Initialize item array
+                this.maxSize = size; // Set maxSize
+                this.currentSize = 0; // Initialize currentSize
+            }
+
+            push() {
+                const newValue = document.getElementById("inputel").value; // Get the input value
+                if (this.currentSize >= this.maxSize) {
+                    alert("Stack is full");
+                } else {
+                    this.item[this.currentSize] = newValue; // Add new value to stack
+                    this.currentSize++; // Increment currentSize
+                }
+                document.getElementById("inputel").value = ""; // Clear input field
+            }
+
+            pop() {
+                if (this.currentSize > 0) {
+                    this.currentSize--; // Decrement currentSize
+                    this.item.length = this.currentSize; // Remove last element
+                } else {
+                    alert("Stack is already empty");
+                }
+            }
+
+            display() {
+                console.log(this.item); // Log the stack contents
+            }
+        }
+
+        const st1 = new Stack(7); // Create a new Stack instance
+    </script>
+</head>
+<body>
+    <h2>Stack in JavaScript</h2>
+    <input type="text" id="inputel" placeholder="Enter any number">
+    <button onclick="st1.push()">Add Element</button>
+    <button onclick="st1.pop()">Remove Element</button>
+    <button onclick="st1.display()">Show All Elements</button>
+</body>
+</html>
