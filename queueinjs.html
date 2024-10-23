@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>linera search Array</title>
+    <script>
+      let data1=[];
+      let currentSize = data1.length;
+     let maxSize = 7; 
+    
+     function add(){
+      let newValue=document.getElementById("item").value;
+      if(currentSize > maxSize){
+        console.log("queue is full");
+        
+      }else{data1[currentSize]=newValue;
+        currentSize++;
+      }
+      
+     }
+
+     function display(){
+      console.log(data1);
+     }
+     
+     display();
+
+    </script>
+  </head>
+  <body>
+    <input type="text" id="item" placeholder="enter any number">
+   <button onclick="add()">add element</button>
+  </body>
+</html>
